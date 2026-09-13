@@ -20,10 +20,12 @@ pipeline {
                 dir('db') {
                     sh 'docker build --platform linux/amd64 -t $IMAGE_NAME_DB:$IMAGE_TAG .'
                     sh 'docker build --platform linux/amd64 -t $IMAGE_NAME_DB:latest .'
+                    sh 'docker build -t $IMAGE_NAME_DB:latest .'
                 }
                 dir('server') {
                     sh 'docker build --platform linux/amd64 -t $IMAGE_NAME_MVC:$IMAGE_TAG .'
                     sh 'docker build --platform linux/amd64 -t $IMAGE_NAME_MVC:latest .'
+                    sh 'docker build -t $IMAGE_NAME_MVC:latest .'
                 }
             }
         }
