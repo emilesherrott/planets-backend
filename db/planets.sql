@@ -21,4 +21,5 @@ VALUES
   ('Jupiter', 'Gas Giant',   139820, 317.8000,  778.500,  95, TRUE),
   ('Saturn',  'Gas Giant',   116460,  95.2000, 1432.000, 146, TRUE),
   ('Uranus',  'Ice Giant',    50724,  14.5000, 2867.000,  28, TRUE),
-  ('Neptune', 'Ice Giant',    49244,  17.1000, 4515.000,  16, TRUE);
+  ('Neptune', 'Ice Giant',    49244,  17.1000, 4515.000,  16, TRUE),
+  ('Pluto', 'Dwarf Planet',    49244,  17.1000, 4515.000,  16, TRUE);
