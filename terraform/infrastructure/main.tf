@@ -10,6 +10,7 @@ terraform {
     resource_group_name = "rg-tfstate-planetary-app"
     storage_account_name = "stplanetses"
     container_name = "tfstate"
+    key = "prod/infrastrucutre/backend-state.tfstate"
   }
 }
 
@@ -30,7 +31,7 @@ resource "azurerm_linux_virtual_machine" "http_server" {
   admin_username        = "azureuser"
   network_interface_ids = [azurerm_network_interface.http_server_nic.id]
   custom_data = base64encode(file("${path.module}/cloud-init.yaml"))
-  
+
   admin_ssh_key {
     username   = "azureuser"
     public_key = file(var.azure_ssh_public_key)
